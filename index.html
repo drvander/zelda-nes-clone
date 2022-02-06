@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=512 height=480></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/p1-gold-webbuild.loader.js";
+      var loaderUrl = buildUrl + "/p1-gold-webbuild-2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/p1-gold-webbuild.data.br",
-        frameworkUrl: buildUrl + "/p1-gold-webbuild.framework.js.br",
-        codeUrl: buildUrl + "/p1-gold-webbuild.wasm.br",
+        dataUrl: buildUrl + "/p1-gold-webbuild-2.data.unityweb",
+        frameworkUrl: buildUrl + "/p1-gold-webbuild-2.framework.js.unityweb",
+        codeUrl: buildUrl + "/p1-gold-webbuild-2.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "LegendOfZelda",
@@ -82,8 +82,8 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "512px";
+        canvas.style.height = "480px";
       }
       loadingBar.style.display = "block";
 
